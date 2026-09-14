@@ -337,14 +337,6 @@
 
     <p>Simple factual and procedural questions score highest. The five multi-source questions in the benchmark are harder: the intent classifier sometimes narrows the search too early, and recall drops on exactly those cases. It's a real failure mode, and one I understand well enough to know where to look next.</p>
 
-    <h2>What's not solved yet</h2>
-
-    <p>A few things I'm not going to gloss over. <strong>Thematic browsing is still fragile</strong> — only 14 of 15,513 relationships are <code>BELONGS_TO_DOMAIN</code>, because the model only tags a domain when the text names it explicitly, so a generic query like "every rule about water" can't yet reliably group results by theme. <strong>258 documents are extracted but not in the graph</strong> — TRANSFORM and LOAD covered the representative 118-document subset, and while the pipeline is incremental enough that ingesting the rest doesn't require rebuilding anything, it hasn't happened yet. And the <strong>80-question benchmark is a starting point, not a finish line</strong> — it validates the architecture, but a feedback loop from real Regard users querying the live system is the natural next dataset to learn from.</p>
-
-    <p>None of that changes the fact that the system is already live rather than a prototype waiting for perfect conditions. Real HSE and legal professionals at Regard query it today, which is the most concrete validation the architecture could get.</p>
-
-    <hr class="rule">
-
     <div class="about">
       <h3>Under the hood</h3>
       <p class="stackline">
